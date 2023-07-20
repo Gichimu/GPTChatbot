@@ -1,0 +1,74 @@
+.container {
+  position: relative;
+}
+
+.content {
+  position: absolute;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30vw;
+  height: 50vh;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+mat-card {
+    min-height: 50vh;
+    max-height: 50vh;
+}
+
+mat-card-header {
+  margin: 0;
+  padding: 0;
+}
+
+mat-card-content {
+  margin: .3rem 0 .3rem 0;
+  overflow: auto;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-footer mat-form-field {
+    width: 100%;
+    position: absolute;
+    bottom: -1.5em;
+    background-color: white;
+    margin-top: 1rem;
+}
+
+mat-form-field input {
+    border: 1px solid rgb(172, 172, 172);
+}
+
+.chat-bubble {
+    height: auto;
+    width: fit-content;
+    padding: .5rem;
+    margin: 1rem 0;
+}
+
+.user {
+    color: rgb(134, 134, 134);
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: .95rem .95rem 0 .95rem;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.bot {
+    color: green;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: .95rem .95rem .95rem 0;
+    text-align: left;
+    margin-right: auto;
+    margin-left: 0;
+    background-color: rgba(236, 234, 234, 0.459);
+}
