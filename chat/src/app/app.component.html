@@ -22,18 +22,16 @@
           </button>
         </mat-toolbar>
       </mat-card-header>
-      <mat-card-content>
+      <mat-card-content class="chat-content">
         <div class="chat-bubble" [ngClass]="chat.type" *ngFor="let chat of chats">
           {{chat.message}}
         </div>
-        
-        
       </mat-card-content>
       <mat-card-footer>
         <form [formGroup]="chatForm" (submit)="getMessage()">
           <mat-form-field appearance="outline">
             <mat-label>Type a question</mat-label>
-            <input matInput formControlName="message"/>
+            <input matInput autofocus formControlName="message"/>
             <button mat-icon-button matSuffix type="submit"><mat-icon>send</mat-icon></button>
           </mat-form-field>
         </form>

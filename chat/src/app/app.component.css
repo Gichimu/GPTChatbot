@@ -15,6 +15,10 @@
   flex: 1 1 auto;
 }
 
+.chat-content {
+  max-height: 36vh;
+}
+
 mat-card {
     min-height: 50vh;
     max-height: 50vh;

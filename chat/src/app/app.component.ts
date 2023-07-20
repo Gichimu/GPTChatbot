@@ -43,6 +43,14 @@ export class AppComponent {
     })
   }
 
+  ngAfterViewChecked(): void {
+    let d = document.querySelector('.chat-content');
+    if(d)
+    {
+      d.scrollTop = d.scrollHeight;
+    }
+  }
+
   getMessage(){
     let message:ChatMessage = {
       type: 'user',
