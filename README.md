@@ -55,12 +55,13 @@ Create a .env file in the backend directory and add the following:
 
 + Start the application:
 
-###### Start the Angular development server (front-end) ######
 `cd chat`
+
 `ng serve`
 
 ###### Start the Node.js server (back-end) ######
 `npm start`
+
 `Access the Chat Application at http://localhost:4200 in your web browser.`
 
 ##### 5. Usage #####
@@ -75,10 +76,10 @@ Create a .env file in the backend directory and add the following:
 + Socket.IO: A library that enables real-time, bidirectional communication between clients and the server.
 + ChatGPT v3.5: The AI model developed by OpenAI, used for intelligent chat responses.
 
-#####7. Contributing#####
+##### 7. Contributing #####
 We welcome contributions to enhance the Chat Application. If you find any bugs or have ideas for new features, please submit an issue or create a pull request on the GitHub repository.
 
-#####8. License#####
+##### 8. License #####
 The Chat Application is licensed under the **MIT** License. Feel free to use, modify, and distribute the application as per the terms of the license.
 
 Please note that the technologies mentioned above (Angular v16, ChatGPT v3.5) may not be the latest versions as of the knowledge cutoff date in September 2021. Make sure to use the most recent versions available at the time of implementation.
