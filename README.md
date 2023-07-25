@@ -1,14 +1,14 @@
 Welcome to the documentation for the GPTChatBot, developed using Angular v16, Node.js, Socket.IO, and ChatGPT v3.5-turbo.
 
 ## Table of Contents ##
-1.Introduction
-2.Features
-3.Requirements
-4.Installation
-5.Usage
-6.Technologies Used
-7.Contributing
-8.License
+1. Introduction
+2. Features
+3. Requirements
+4. Installation
+5. Usage
+6. Technologies Used
+7. Contributing
+8. License
 
 ### 1. Introduction ###
 The Chat Application is a real-time chat platform that allows users to connect with each other and have live conversations. It utilizes Angular v16 on the front-end for a seamless user interface, Node.js on the back-end for server-side logic, Socket.IO for real-time communication, and ChatGPT v3.5 for intelligent chat responses.
@@ -32,14 +32,20 @@ Follow these steps to install and set up the Chat Application:
 
 + Clone the repository from GitHub.
 
-`git clone https://github.com/your-username/chat-application.git`
+`git clone https://github.com/your-username/chat-application.git`  
+
 `cd chat-application`
+
 `Install the dependencies for both the front-end (Angular) and the back-end (Node.js).`
 
+
 `cd frontend`
+
 `npm install`
 
+
 `cd ../backend`
+
 `npm install`
 
 + Set up environment variables:
