@@ -1,6 +1,6 @@
 Welcome to the documentation for the GPTChatBot, developed using Angular v16, Node.js, Socket.IO, and ChatGPT v3.5-turbo.
 
-##Table of Contents##
+## Table of Contents ##
 1.Introduction
 2.Features
 3.Requirements
@@ -10,16 +10,16 @@ Welcome to the documentation for the GPTChatBot, developed using Angular v16, No
 7.Contributing
 8.License
 
-###1. Introduction###
+### 1. Introduction ###
 The Chat Application is a real-time chat platform that allows users to connect with each other and have live conversations. It utilizes Angular v16 on the front-end for a seamless user interface, Node.js on the back-end for server-side logic, Socket.IO for real-time communication, and ChatGPT v3.5 for intelligent chat responses.
 
-###2. Features###
+### 2. Features ###
 + Real-time chat with multiple users.
 + Seamless integration of ChatGPT v3.5 for natural and intelligent chat responses.
 + User authentication and authorization.
 + Chat history storage.
 
-#####3. Requirements#####
+##### 3. Requirements #####
 To run the Chat Application, ensure you have the following installed:
 
 + Node.js (v14 or higher)
@@ -27,7 +27,7 @@ To run the Chat Application, ensure you have the following installed:
 + Angular CLI (v12 or higher)
 + ChatGPT API key (sign up on OpenAI to obtain the API key)
 
-#####4. Installation#####
+##### 4. Installation #####
 Follow these steps to install and set up the Chat Application:
 
 + Clone the repository from GitHub.
@@ -57,18 +57,17 @@ Create a .env file in the backend directory and add the following:
 `npm start`
 `Access the Chat Application at http://localhost:4200 in your web browser.`
 
-#####5. Usage#####
-Register a new account or log in to an existing one.
-Join or create a chat room.
-Start chatting with other users.
-ChatGPT will respond intelligently to the messages in the conversation.
-Utilize emojis and file sharing for enhanced communication.
+##### 5. Usage #####
++ Open Application
++ Start typing on the prompt.
++ ChatGPT will respond intelligently to the messages in the conversation.
++ Utilize emojis and file sharing for enhanced communication.
 
-#####6. Technologies Used#####
-Angular v16: A powerful front-end framework for building user interfaces.
-Node.js: A JavaScript runtime for server-side development.
-Socket.IO: A library that enables real-time, bidirectional communication between clients and the server.
-ChatGPT v3.5: The AI model developed by OpenAI, used for intelligent chat responses.
+##### 6. Technologies Used #####
++ Angular v16: A powerful front-end framework for building user interfaces.
++ Node.js: A JavaScript runtime for server-side development.
++ Socket.IO: A library that enables real-time, bidirectional communication between clients and the server.
++ ChatGPT v3.5: The AI model developed by OpenAI, used for intelligent chat responses.
 
 #####7. Contributing#####
 We welcome contributions to enhance the Chat Application. If you find any bugs or have ideas for new features, please submit an issue or create a pull request on the GitHub repository.
