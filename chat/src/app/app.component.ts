@@ -16,8 +16,8 @@ interface ChatMessage {
 export class AppComponent {
   title = 'chat';
   chatForm: any;
+  loading = false
   chats:ChatMessage[] = []
-  userMessages: any[] = []
   message: ChatMessage = {
     type: '',
     message: ''
@@ -39,6 +39,7 @@ export class AppComponent {
         type: 'bot',
         message: data
       }
+      this.loading = false
       this.chats.push(this.message)
     })
   }
@@ -58,8 +59,8 @@ export class AppComponent {
     }
     let msg = this.chatForm.controls.message.value
     this.socketService.emit(msg)
+    this.loading = true
     this.chats.push(message)
-    // this.userMessages.push()
     this.chatForm.reset()
   }
 

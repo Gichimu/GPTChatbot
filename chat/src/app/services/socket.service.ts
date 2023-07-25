@@ -15,9 +15,7 @@ export class SocketService {
   }
 
   emit(message: string): void {
-    setTimeout(()=>{
-      this.socket.emit("msg", message)
-    }, 2000)
+    this.socket.emit("msg", message)
   }
 
   listen(): void {

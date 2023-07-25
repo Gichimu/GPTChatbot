@@ -11,6 +11,7 @@ const config = new Configuration({
 const openai = new OpenAIApi(config)
 
 const app = express()
+
 app.use(cors())
 // app.use(express.static(path.join(__dirname, "./chat")));
 const PORT = process.env.PORT
@@ -20,29 +21,34 @@ const io = socketIO(server, {
       origin: "http://localhost:4200"
     }}
 )
-
-async function getMessages(){
-    const question = ""
-    const chatCompletion = await openai.createChatCompletion({
-        model: "gpt-3.5-turbo",
-        messages: [{role: "user", content: question}],
-    })
-
-    // console.log()
+ 
+function getMessages(){
+    const prompts = []
+    
     io.on('connection', (socket)=> {
-        // console.log("new connection...")
+        
+        socket.emit("message", "Hello, how may i assist you?")  
+
+        messages = prompts.map(([role, content]) => {role, content})
+
+        socket.on("msg", async (msg)=>{
     
-        // socket.emit("message", chatCompletion.data.choices[0].message.content) 
-    
-        socket.on("msg", (msg)=>{
-            question = msg
+            messages.push({role: "user", content: msg})
+            chatCompletion = await openai.createChatCompletion({
+                model: "gpt-3.5-turbo",
+                messages: messages,
+                temperature: 0
+            })
             io.emit("message", chatCompletion.data.choices[0].message.content)
+            messages.push({role: "assistant", content: chatCompletion.data.choices[0].message.content}) //store a record of the conversation
         })
     
-        // socket.on('disconnect', ()=>{
-        //     socket.disconnect()
-        // })
+        socket.on('disconnect', ()=>{
+            socket.disconnect()
+        })
     })
+
+    
 }
 
 
