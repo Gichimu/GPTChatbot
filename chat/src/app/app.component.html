@@ -23,18 +23,7 @@
         </mat-toolbar>
       </mat-card-header>
       <mat-card-content class="chat-content">
-        <!-- <div *ngIf="loading; else elseBlock"></div>
-        <ng-template #elseBlock></ng-template> -->
-        <div *ngIf="loading; else elseblock">
-          <div  class="chat-bubble bot loading">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-          </div>
-        </div>
-        <ng-template #elseblock>
-          <div class="chat-bubble" [ngClass]="chat.type" *ngFor="let chat of chats">{{chat.message}}</div>
-        </ng-template>
+        <div class="chat-bubble" [ngClass]="chat.type" *ngFor="let chat of chats">{{chat.message}}</div>
       </mat-card-content>
       <mat-card-footer>
         <form [formGroup]="chatForm" (submit)="getMessage()">
